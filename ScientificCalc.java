@@ -86,3 +86,38 @@ class Calculator extends JFrame {
                 textfield.setText("");
             }
  
+            else
+            {
+                if (number)
+                {
+                    
+                    action();
+                    textfield.setText("");
+                    
+                }
+                else
+                {
+                    number = true;
+                    if (equalOp.equals("="))
+                    {
+                        op.setTotal(displayText);
+                    }else
+                    if (equalOp.equals("+"))
+                    {
+                        op.add(displayText);
+                    }
+                    else if (equalOp.equals("-"))
+                    {
+                        op.subtract(displayText);
+                    }
+                    else if (equalOp.equals("*"))
+                    {
+                        op.multiply(displayText);
+                    }
+                    else if (equalOp.equals("/"))
+                    {
+                        op.divide(displayText);
+                    }
+                    
+                    textfield.setText("" + op.getTotalString());
+     
